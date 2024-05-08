@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+body{
+    margin: 0px;
+    padding: 20px;
+    overflow: auto;
+    line-height: 1.5;
+    color: black;
+    background-color: rgb(19, 0, 88);
+    font-family: 'Freeman', sans-serif;
+}
+
+header{
+    background-color: rgb(13, 78, 136);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+#title{
+    color: rgb(233, 171, 2);
+    font-size: 70px;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+}
+
+p{
+    margin: 20px;
+    padding: 20px;
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+#logo{
+    width: 150px;
+}
+
+#logo img{
+    max-width: 100%;
+    height: auto;
+}
+
+.chaplin{
+    width: 400px; 
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+#menu ul{
+    list-style-type: none;
+    font-size: 20px;
+    margin: 10px;
+    padding: 0;
+    text-align: right;
+}
+
+#menu ul li{
+    display: inline-block;
+}
+
+#menu ul li a{
+    display: block;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#menu ul li a:hover{
+    background-color: rgba(255, 255, 255, 0.3);;
+}
+
+#footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    color: rgb(13, 78, 136);
+    text-align: left;
+}
+
+/*----------------------------FORO------------------------------*/
+.actividad{
+    text-align: center ;
+    color: rgb(233, 171, 2);
+    font-weight: bold;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+input[type="text"], input[type="text"], input[type="url"], textarea {
+    width: 100%;
+    padding: 1dvh;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: rgb(48, 19, 153); /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambio de cursor al pasar el ratón */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+/* Estilo para el botón "Agregar Actividad" al pasar el ratón */
+button[type="submit"]:hover {
+    background-color: rgb(81, 47, 202); /* Color de fondo al pasar el ratón */
+}
+
+.forum{
+    background-color: rgb(13, 78, 136);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.tarjeta-actividad {
+    background-color: rgb(19, 0, 88);
+    border: 1px solid rgb(13, 78, 136);
+    display: inline-block;
+    width: 300px;
+    height: 450px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    margin-right: 20px;
+}
+
+.tarjeta-actividad:hover{
+    transform: scale(1.01);
+}
+
+.titulo-actividad {
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.descripcion-actividad {
+    color: whitesmoke;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.imagen-actividad {
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}

@@ -1,45 +1,31 @@
+function getPeliculaJQ() {
+    const url = `https://students-api.up.railway.app/movies`;
 
-function MovieTarget(movie) {
-    const divTarjeta = document.createElement('div');
-    divTarjeta.classList.add("peliculas");
+    $.get(url, function(data){
+        const seccionTarjetas = document.getElementById('tarjetas');
+        seccionTarjetas.innerHTML = '';
 
-    const title = document.createElement('h3');
-    const year = document.createElement('p');
-    const director = document.createElement('p');
-    const duration = document.createElement('p');
-    const genre = document.createElement('p');
-    const rate = document.createElement('p');
-    const poster = document.createElement('img');
+        data.forEach(pelicula => {
+            const card = document.createElement('div');
+            card.classList.add('card');
 
-    title.textContent = movie.title;
-    year.textContent = `Año: ${movie.year}`;
-    director.textContent = `Director: ${movie.director}`;
-    duration.textContent = `Duración: ${movie.duration}`;
-    genre.textContent = `Género: ${movie.genre}`;
-    rate.textContent = `Calificación: ${movie.rate}⭐`;
-    poster.src = movie.poster;
+            card.innerHTML = `
+            <h2>${pelicula.title}</h2>
+            <p>Direction: ${pelicula.director}.</p>
+            <p>Year: ${pelicula.year}</p>
+            <p>Duration: ${pelicula.duration}.</p>
+            <p>Genre: ${pelicula.genre.join(", ")}.</p>
+            <p>Rate: ${pelicula.rate}⭐</p>
+            <img src="${pelicula.poster}" alt="${pelicula.title}">
+        `;
 
-    divTarjeta.appendChild(title);
-    divTarjeta.appendChild(year);
-    divTarjeta.appendChild(director);
-    divTarjeta.appendChild(duration);
-    divTarjeta.appendChild(genre);
-    divTarjeta.appendChild(rate);
-    divTarjeta.appendChild(poster);
-
-    return divTarjeta;
-}
-
-function MovieHTML() {
-    const contenedorTarjetas = document.getElementById("contenedor-tarjetas");
-    tempData.forEach(pelicula => {
-        const tarjeta = MovieTarget(pelicula);
-        contenedorTarjetas.appendChild(tarjeta);
+        seccionTarjetas.appendChild(card);
+        });
+    }).fail(function(){
+        console.log('Hubo un error');
     });
 }
 
-document.addEventListener("DOMContentLoaded", function(){
-    MovieHTML();
-})
-
-
+$(document).ready(function(){
+    getPeliculaJQ();
+});
