@@ -12,24 +12,37 @@
 <body>
     <header>
         <div id="logo">
-            <img src="https://images.vexels.com/media/users/3/318492/isolated/preview/4c3ef0e5fa3ca32df0c01597a95e3a5a-icono-azul-de-la-claqueta-de-cine.png" alt="logo">
+            <img src="../img/logoCine.webp" class="rounded float-left" alt="...">
         </div>
-        <div id="title">
+        <div class="title text-warning">
             <h1>CineSark</h1>
         </div>
         <div id="menu">
             <nav>
-                <ul>
-                    <li><a href="contacto.html">CONTACTO</a></li>
-                    <li><a href="proyecto.html">PROYECTO</a></li>
-                    <li><a href="historia.html">HISTORIA</a></li>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="contacto.html">CONTACTO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="proyecto.html">PROYECTO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="historia.html">HISTORIA</a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
-    <div class="pelicula">
-        <h2 class="PeliculasRecomendadas">Películas Recomendadas</h2>
-        <section id="tarjetas" class="contenedor-tarjetas"></section>
+    <div class="pelicula rounded">
+        <nav class="navbar navbar-light bg-light bg-transparent">
+            <a class="peliculasRecomendadas navbar-brand text-white">Películas Recomendadas</a>
+            <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </nav>
+        <section id="seccion-tarjetas" class="contenedor-tarjetas shadow-sm p-3 mb-5 rounded">
+        </section>
     </div>
     <footer>
         <p id="footer">2024 CineSark. Todos los derechos reservados.</p>

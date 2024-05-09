@@ -2,12 +2,12 @@ function getPeliculaJQ() {
     const url = `https://students-api.up.railway.app/movies`;
 
     $.get(url, function(data){
-        const seccionTarjetas = document.getElementById('tarjetas');
+        const seccionTarjetas = document.getElementById("seccion-tarjetas");
         seccionTarjetas.innerHTML = '';
 
         data.forEach(pelicula => {
             const card = document.createElement('div');
-            card.classList.add('card');
+            card.classList.add('tarjetas');
 
             card.innerHTML = `
             <h2>${pelicula.title}</h2>

@@ -100,13 +100,8 @@ input[type="text"], input[type="text"], input[type="url"], textarea {
 }
 
 button[type="submit"] {
-    background-color: rgb(48, 19, 153); /* Color de fondo */
-    color: white; /* Color del texto */
-    padding: 10px 20px; /* Espaciado interno */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambio de cursor al pasar el ratón */
-    font-size: 16px; /* Tamaño de la fuente */
+    background-color: rgb(48, 19, 153); 
+    border: 1px solid ;
 }
 
 /* Estilo para el botón "Agregar Actividad" al pasar el ratón */
@@ -115,17 +110,15 @@ button[type="submit"]:hover {
 }
 
 .forum{
-    background-color: rgb(13, 78, 136);
     padding: 20px;
     margin: 10px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .tarjeta-actividad {
-    background-color: rgb(19, 0, 88);
-    border: 1px solid rgb(13, 78, 136);
+    background-color: black;
+    border: 1px solid black;
     display: inline-block;
     width: 300px;
     height: 450px;
@@ -143,10 +136,10 @@ button[type="submit"]:hover {
 }
 
 .titulo-actividad {
-    color: whitesmoke;
-    font-size: 20px;
+    color: white;
+    font-size: 22px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .descripcion-actividad {
