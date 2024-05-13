@@ -1,5 +1,5 @@
 function getPeliculaJQ() {
-    const url = `https://students-api.up.railway.app/movies`;
+    const url = "https://students-api.up.railway.app/movies";
 
     $.get(url, function(data){
         const seccionTarjetas = document.getElementById("seccion-tarjetas");
