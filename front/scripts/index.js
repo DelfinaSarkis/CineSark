@@ -1,31 +1,24 @@
-function getPeliculaJQ() {
-    const url = "https://students-api.up.railway.app/movies";
+const {renderCards} = require("./renderCards");
+const axios = require("axios");
 
-    $.get(url, function(data){
-        const seccionTarjetas = document.getElementById("seccion-tarjetas");
-        seccionTarjetas.innerHTML = '';
+const getPeliculaJQ = async function(){
+    try{
+        const response =
+        await axios.get("https://students-api.up.railway.app/movies"
+);
 
-        data.forEach(pelicula => {
-            const card = document.createElement('div');
-            card.classList.add('tarjetas');
+console.log(response.data);
+    } catch (error){
+        console.log("Hubo un error:\n", error);
+    }
+};
 
-            card.innerHTML = `
-            <h2>${pelicula.title}</h2>
-            <p>Direction: ${pelicula.director}.</p>
-            <p>Year: ${pelicula.year}</p>
-            <p>Duration: ${pelicula.duration}.</p>
-            <p>Genre: ${pelicula.genre.join(", ")}.</p>
-            <p>Rate: ${pelicula.rate}⭐</p>
-            <img src="${pelicula.poster}" alt="${pelicula.title}">
-        `;
+getPeliculaJQ();
 
-        seccionTarjetas.appendChild(card);
-        });
-    }).fail(function(){
-        console.log('Hubo un error');
-    });
-}
+// const url = "https://students-api.up.railway.app/movies";
 
-$(document).ready(function(){
-    getPeliculaJQ();
-});
+// $.get(url, function(data){
+//    renderCards(data);
+// }).fail(function(){
+//    console.log('Hubo un error');
+// });

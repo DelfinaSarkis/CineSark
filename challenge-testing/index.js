@@ -11,22 +11,14 @@ class CarritoCompra {
     };
 
     calcularTotal(){
-        let total = 0
-        for(const producto of this.carrito) {
-            total += producto.price;
-        }
-        return total;
+    return this.carrito.reduce((acc, producto) => acc + producto.price, 0);
     };
 
     aplicarDescuento(porcentaje){
         if(porcentaje < 0 || porcentaje > 100) {
             throw new Error("El porcentaje dado debe estar entre el 0 y el 100.");
         }
-        const total = this.calcularTotal();
-        const descuento = (total * porcentaje) / 100;
-        const totalConDescuento = total - descuento;
-
-        return totalConDescuento;
+        return this.calcularTotal() * (1 - porcentaje / 100);
     };
 };
 

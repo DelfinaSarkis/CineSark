@@ -32,6 +32,10 @@ header{
     height: auto;
 }
 
+.peliculasRecomendadas{
+    font-size: 35px;
+}
+
 .contenedor-tarjetas {
     display: flex;
     justify-content: space-between; 
