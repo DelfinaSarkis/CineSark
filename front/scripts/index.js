@@ -3,11 +3,9 @@ const axios = require("axios");
 
 const getPeliculaJQ = async function(){
     try{
-        const response =
-        await axios.get("https://students-api.up.railway.app/movies"
-);
+        const response = await axios.get("http://localhost:3000/movies");
+renderCards(response.data);
 
-console.log(response.data);
     } catch (error){
         console.log("Hubo un error:\n", error);
     }
