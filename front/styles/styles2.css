@@ -96,6 +96,16 @@ input[type="text"], input[type="text"], input[type="url"], textarea {
     box-sizing: border-box;
 }
 
+.custom-input {
+    border: 2px solid gold;
+    box-shadow: none;
+}
+
+.custom-input:focus {
+    border-color: gold;
+    box-shadow: 0 0 5px gold; 
+}
+
 button[type="submit"] {
     background-color: rgb(48, 19, 153); 
     border: 1px solid ;
@@ -103,7 +113,8 @@ button[type="submit"] {
 
 /* Estilo para el botón "Agregar Actividad" al pasar el ratón */
 button[type="submit"]:hover {
-    background-color: rgb(81, 47, 202); /* Color de fondo al pasar el ratón */
+    background-color: rgb(81, 47, 202);
+    border: 1px solid gold; /* Color de fondo al pasar el ratón */
 }
 
 .forum{

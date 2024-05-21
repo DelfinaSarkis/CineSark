@@ -33,4 +33,13 @@ async function getAllMovies(){
 }
 };
 
-module.exports = {getAllMovies};
+async function createMovie(data){
+    try{
+        const createdMovie = await MovieModel.create(data);
+        return createdMovie;
+    } catch(error){
+        console.log(error);
+    }
+};
+
+module.exports = {getAllMovies, createMovie};
