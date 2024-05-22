@@ -1,8 +1,8 @@
 module.exports = {
-    entry: "./scripts/index.js",
+    entry: "./scripts/createMovie",
 
     output: {
         path: __dirname + "/public",
-        filename: "bundle.js",
+        filename: "bundle2.js",
     },
 };

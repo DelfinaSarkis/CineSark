@@ -25,6 +25,26 @@ header{
     display: flex;
 }
 
+.fondo-imagen{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/013/532/369/original/film-roll-transparent-free-png.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.fondo-imagen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 p{
     margin: 20px;
     padding: 20px;
@@ -32,17 +52,41 @@ p{
     color: whitesmoke;
 }
 
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.425);
+}
+
+section h2 {
+    border-bottom: 2px solid #333;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: rgb(240, 255, 255);
+}
+
+.historia{
+    color: rgb(255, 255, 255);
+    
+}
+
+.lista-avances{
+    list-style: none;
+    color: #d4d3d6;
+    font-size: 23px;
+    padding: 0;
+    margin: 20px;
+}
+
 #logo img{
     width: 150px;
     max-width: 100%;
     height: auto;
-}
-
-.chaplin{
-    width: 400px; 
-    display: block;
-    margin-left: auto; 
-    margin-right: auto;
 }
 
 #menu ul{
@@ -78,13 +122,38 @@ p{
     text-align: left;
 }
 
+/*----------------------------CAROUSEL------------------------*/
+.carousel {
+    width: 60%;
+    height: 60vh;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    padding-bottom: 200px;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 60vh;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+}
+
 /*----------------------------FORO------------------------------*/
+
 .actividad{
     text-align: center ;
     color: rgb(233, 171, 2);
     font-weight: bold;
     font-size: 30px;
     padding-bottom: 10px;
+}
+
+.inputsFormulario{
+    margin: 30px;
 }
 
 input[type="text"], input[type="text"], input[type="url"], textarea {
@@ -96,71 +165,38 @@ input[type="text"], input[type="text"], input[type="url"], textarea {
     box-sizing: border-box;
 }
 
-.custom-input {
-    border: 2px solid gold;
-    box-shadow: none;
-}
-
 .custom-input:focus {
     border-color: gold;
     box-shadow: 0 0 5px gold; 
 }
 
-button[type="submit"] {
+button[type="submit"], button[type="button"] {
     background-color: rgb(48, 19, 153); 
-    border: 1px solid ;
+    border: 1px solid;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 /* Estilo para el botón "Agregar Actividad" al pasar el ratón */
-button[type="submit"]:hover {
+button[type="submit"]:hover, button[type="button"]:hover {
     background-color: rgb(81, 47, 202);
     border: 1px solid gold; /* Color de fondo al pasar el ratón */
 }
 
-.forum{
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    text-align: center;
+/* Contenedor de los botones */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
 }
 
-.tarjeta-actividad {
-    background-color: black;
-    border: 1px solid black;
-    display: inline-block;
-    width: 300px;
-    height: 450px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
-    margin-top: 20px;
+#footer {
+    text-align: left;
+    color: rgb(13, 78, 136);
     padding: 10px;
-    transition: transform 0.3s ease;
-    margin-right: 20px;
-}
-
-.tarjeta-actividad:hover{
-    transform: scale(1.01);
-}
-
-.titulo-actividad {
-    color: white;
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.descripcion-actividad {
-    color: whitesmoke;
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 10px;
-}
-
-.imagen-actividad {
-    max-width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 10px;
 }

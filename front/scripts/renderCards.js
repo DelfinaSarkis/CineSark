@@ -1,25 +1,14 @@
+const createCards = require("./createCards.js");
+
 function renderCards(data) {
-    const seccionTarjetas = document.getElementById("seccion-tarjetas");
-        seccionTarjetas.innerHTML = '';
+    seccionTarjetas.innerHTML = "";
 
-        data.forEach(pelicula => {
-            const card = document.createElement('div');
-            card.classList.add('tarjetas');
+    const map1 = data.map((pelicula) =>
+    seccionTarjetas.appendChild(createCards(pelicula))
+    );
 
-            card.innerHTML = `
-            <h2>${pelicula.title}</h2>
-            <p>Direction: ${pelicula.director}.</p>
-            <p>Year: ${pelicula.year}</p>
-            <p>Duration: ${pelicula.duration}.</p>
-            <p>Genre: ${pelicula.genre.join(", ")}.</p>
-            <p>Rate: ${pelicula.rate}⭐</p>
-            <img src="${pelicula.poster}" alt="${pelicula.title}">
-        `;
+    map1.forEach((card) => {
+    seccionTarjetas.appendChild(card);
+    });}
 
-        seccionTarjetas.appendChild(card);
-        });
-};
-
-module.exports = {
-    renderCards: renderCards
-};
+module.exports = renderCards;

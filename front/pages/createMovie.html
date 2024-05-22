@@ -13,27 +13,23 @@
         <div id="logo">
         <img src="https://images.vexels.com/media/users/3/318492/isolated/preview/4c3ef0e5fa3ca32df0c01597a95e3a5a-icono-azul-de-la-claqueta-de-cine.png" class="rounded float-left" alt="logo">
     </div>
-    <div id="title"><h1 >Crear Película</h1></div>
+    <div id="title"><h1 >CREAR PELÍCULA</h1></div>
     <div id="menu">
         <nav>
-            <ul class="nav justify-content-end">
-                <li class="nav-item">
-                    <a class="nav-link active text-white" href="contacto.html">CONTACTO</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active text-white" href="index.html">INICIO</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active text-white" href="historia.html">HISTORIA</a>
-                </li>
-            </ul>
+        <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="similares.html">SIMILARES</a></li>
+            <li><a href="historia.html">HISTORIA</a></li>
+        </ul>
         </nav>
     </div>
 </header>
+
 <section>
     <div class="forum">
     <h2 class="actividad">Ingresa Tu Película Favorita</h2>
     <form id="formulario">
+        <div class="inputsFormulario">
         <div class="inputTitulo input-group mb-2">
             <input type="text" class="inputTitulo form-control custom-input" id="título" placeholder="Título">
         </div>
@@ -50,25 +46,31 @@
         </div>
 
         <div class="input-group mb-2">
-            <input type="text" class="inputDuracion form-control custom-input" id="duración" placeholder="Duración" aria-label="Duration">
-            
             <input type="number" step="any" class="inputCalificacion form-control custom-input" id="calificación" placeholder="Calificación" aria-label="Rate">
+
+            <input type="text" class="inputDuracion form-control custom-input" id="duración" placeholder="Duración" aria-label="Duration">
         </div>
 
         <div class="inputImagen input-group mb-2 " >
             <input type="url" class="inputImagen form-control custom-input" id="url-imagen" placeholder="URL de Imagen">
         </div>
-
+        <div class="button-container">
         <div class="submit input">
             <button type="submit" class="btn btn-primary btn-lg" id="submitInput">Enviar</button>
         </div>
         <div class="clear input">
             <button type="button" class="btn btn-primary btn-lg" id="clearInput">Borrar</button>
         </div>
+        </div>
     </form></div>
 </section>
+
+<footer>
+    <p id="footer">2024 CineSark. Todos los derechos reservados.</p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script src="../public/bundle2.js"></script>
+    <script src="../public/bundle2.js"></script>
 </body>
 </html>

@@ -38,40 +38,58 @@ header{
 
 .contenedor-tarjetas {
     display: flex;
-    justify-content: space-between; 
-    padding: 20px;
+    flex-wrap: wrap;
 }
 
-.tarjetas {
-    width: calc(33.33% - 40px);
+.peliculas {
     background-color: black;
-    color: whitesmoke;
-    border-radius: 10px;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(46, 43, 43, 0.4);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(88, 88, 88, 0.3);
+    width: 23%;
+    margin: 1%;
     padding: 20px;
-    transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    color: white;
+    text-align: center;
+    transition: transform 0.15s ease-in-out;
 }
 
-.tarjetas:hover {
-    transform: scale(1.02);
+.peliculas:hover {
+    transform: scale(1.03);
 }
 
-.tarjetas img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover; 
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+.cardPoster {
+    width: 100%;
+    height: 500px;
+    display: block;
+    object-fit: cover;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: solid 2px white;
+}
+
+.cardContent {
+    padding: 10px;
+}
+
+.cardTittle {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-family: 'Freeman', sans-serif;
+    margin-bottom: 10px;
+    height: 3em;
+}
+
+.cardYear, .cardDirector {
+    font-size: 1.2em;
+    font-family: 'Freeman', sans-serif;
+    margin-bottom: 10px;
 }
 
 #footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    color: rgb(13, 78, 136);
     text-align: left;
+    color: rgb(13, 78, 136);
+    padding: 10px;
 }

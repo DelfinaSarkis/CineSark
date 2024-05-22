@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 async function handler (event){
-    event.preventDefault()
+    event.preventDefault();
 
     const title = document.getElementById('título').value.trim();
     const year = document.getElementById('año').value.trim();
@@ -23,7 +23,6 @@ async function handler (event){
         return;
     }
     try {
-
         await axios.post("http://localhost:3000/movies", {title, year: parseInt(year), director, genre: genre.split(","), duration, rate: parseFloat(rate), poster});
         clear();
     } catch (err) { console.error(err);}
